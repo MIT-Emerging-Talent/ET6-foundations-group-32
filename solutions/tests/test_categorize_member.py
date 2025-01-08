@@ -62,7 +62,7 @@ class TestCategorizeMember(unittest.TestCase):
     # Edge cases
     def test_minimum_values(self):
         """it should handle minimum possible values"""
-        self.assertEqual(categorize_member(0, 0), "Junior")
+        self.assertEqual(categorize_member(10, 0), "Junior")
 
     def test_age_boundary_junior(self):
         """it should evaluate (17, 2) as Junior at age boundary"""
@@ -106,10 +106,10 @@ class TestCategorizeMember(unittest.TestCase):
         with self.assertRaises(AssertionError):
             categorize_member("55", 7)
 
-    def test_invalid_handicap_type(self):
-        """it should raise AssertionError for non-integer handicap"""
-        with self.assertRaises(AssertionError):
-            categorize_member(55, "7")
+    def test_age_less_than_ten(self):
+        """it should raise ValueError for age less than 10"""
+        with self.assertRaises(ValueError):
+            categorize_member(9, 5)
 
     def test_none_age_value(self):
         """it should raise AssertionError for None age value"""
@@ -120,6 +120,11 @@ class TestCategorizeMember(unittest.TestCase):
         """it should raise ValueError for negative age"""
         with self.assertRaises(ValueError):
             categorize_member(-1, 5)
+
+    def test_invalid_handicap_type(self):
+        """it should raise AssertionError for non-integer handicap"""
+        with self.assertRaises(AssertionError):
+            categorize_member(55, "7")
 
     def test_invalid_handicap_range(self):
         """it should raise ValueError for out-of-range handicap"""

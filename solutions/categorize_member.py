@@ -17,8 +17,8 @@ def categorize_member(age: int, handicap: int) -> str:
     """Categorizes an individual into a membership program based on their age and handicap.
 
     Parameters:
-        age (int): The individual's age. Must be non-negative.
-        handicap (int): The individual's skill level. Must be between 0 and 10.
+        age (int): The individual's age. Must be non-negative and at least 10
+        handicap (int): The individual's skill level. Must be between 0 and 10
 
     Returns:
         str: The membership category ("Junior", "Senior", "Intermediate", or "Open")
@@ -29,6 +29,7 @@ def categorize_member(age: int, handicap: int) -> str:
         -  If handicap is not an integer
         ValueError:
         -  If the age is negative integer
+        -  If the age is less than 10
         -  If the handicap is out of range (0 to 10)
 
     Examples:
@@ -49,18 +50,20 @@ def categorize_member(age: int, handicap: int) -> str:
     # Value range validation
     if age < 0:
         raise ValueError("Age cannot be negative")
+    if age < 10:
+        raise ValueError("Age cannot be less than 10")
     if not 0 <= handicap <= 10:
         raise ValueError("Handicap must be between 0 and 10")
 
     # Age is less than 18 AND handicap in range 0-3
     if age < 18 and 0 <= handicap <= 3:
         return "Junior"
-    # Age is 55 or older AND handicap in range 8-10
-    elif age >= 55 and 8 <= handicap <= 10:
-        return "Senior"
     # Age is 18 or older AND handicap in range 4-7
     elif age >= 18 and 4 <= handicap <= 7:
         return "Intermediate"
+    # Age is 55 or older AND handicap in range 8-10
+    elif age >= 55 and 8 <= handicap <= 10:
+        return "Senior"
     # Any other case
     else:
         return "Open"
