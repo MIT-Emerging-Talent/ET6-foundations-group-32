@@ -23,7 +23,7 @@ def sum_of_evens(n: int) -> int:
         int: The sum of all even numbers from 1 to n.
 
     Raises:
-        AssertionError: If the input is not an integer.
+        TypeError: If the input is not an integer.
         ValueError: If the input is negative.
 
     Examples:
@@ -34,8 +34,9 @@ def sum_of_evens(n: int) -> int:
         >>> sum_of_evens(1)
         0
     """
-    # Defensive assertions
-    assert isinstance(n, int), "Input must be an integer."
+    # Defensive checks
+    if not isinstance(n, int):
+        raise TypeError("Input must be an integer.")
     if n < 0:
         raise ValueError("Input must be a non-negative integer.")
 
