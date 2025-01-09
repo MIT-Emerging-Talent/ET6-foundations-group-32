@@ -11,7 +11,7 @@ Test Categories:
 
 import unittest
 
-from sum_of_even import sum_of_evens
+from sum_of_evens import sum_of_evens
 
 
 class TestSumOfEvens(unittest.TestCase):
