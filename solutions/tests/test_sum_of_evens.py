@@ -4,9 +4,9 @@
 This module contains unit tests for the sum_of_evens function.
 
 Test Categories:
-  - Regular Passing Cases: Valid ranges of inputs.
-  - Boundary Cases: Edge scenarios like zero or single values.
-  - Defensive Cases: Invalid or negative inputs.
+- Regular Passing Cases: Valid ranges of inputs.
+- Boundary Cases: Edge scenarios like zero or single values.
+- Defensive Cases: Invalid or negative inputs.
 """
 
 import unittest
