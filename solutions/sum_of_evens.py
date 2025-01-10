@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 This module contains a function to calculate the sum of all even numbers
 from 1 to a given number.
 
 Function:
- - sum_of_evens: Returns the sum of all even numbers within the given range.
+- sum_of_evens: Returns the sum of all even numbers within the given range.
 
-@author Thandar Htwer (Marshar)
+@author: Thandar Htwer (Marshar)
 Created on Jan 8, 2025
 """
 
 
 def sum_of_evens(n: int) -> int:
     """
-    Calculate the sum of all even numbers from 1 to n.
+    Calculates the sum of all even numbers from 1 to n.
 
     Parameters:
         n (int): The upper limit of the range (inclusive).
@@ -22,7 +23,8 @@ def sum_of_evens(n: int) -> int:
         int: The sum of all even numbers from 1 to n.
 
     Raises:
-        ValueError: If the input is not a non-negative integer.
+        AssertionError: If the input is not an integer.
+        ValueError: If the input is negative.
 
     Examples:
         >>> sum_of_evens(10)
@@ -32,7 +34,7 @@ def sum_of_evens(n: int) -> int:
         >>> sum_of_evens(1)
         0
     """
-   # Defensive assertions
+    # Defensive assertions
     assert isinstance(n, int), "Input must be an integer."
     if n < 0:
         raise ValueError("Input must be a non-negative integer.")
