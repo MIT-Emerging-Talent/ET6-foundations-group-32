@@ -21,7 +21,8 @@ def categorize_member(age: int, handicap: int) -> str:
         handicap (int): The individual's skill level. Must be between 0 and 10
 
     Returns:
-        str: The membership category ("Junior", "Senior", "Intermediate", or "Open")
+        str: The membership category ("Junior", "High Skill Junior, "Intermediate",
+        "Low Skill Intermediate", "High Skill Intermediate", "Senior", "Low Skill Senior")
 
     Raises:
         AssertionError:
@@ -35,12 +36,19 @@ def categorize_member(age: int, handicap: int) -> str:
     Examples:
         >>> categorize_member(17, 2)
         'Junior'
-        >>> categorize_member(55, 8)
-        'Senior'
+        >>> categorize_member(14, 7)
+        'High Skill Junior'
         >>> categorize_member(25, 5)
         'Intermediate'
+        >>> categorize_member(30, 2)
+        'Low Skill Intermediate'
         >>> categorize_member(45, 9)
-        'Open'
+        'High Skill Intermediate'
+        >>> categorize_member(55, 8)
+        'Senior'
+        >>> categorize_member(60, 3)
+        'Low Skill Senior'
+
     """
 
     # Validate inputs type
@@ -55,15 +63,29 @@ def categorize_member(age: int, handicap: int) -> str:
     if not 0 <= handicap <= 10:
         raise ValueError("Handicap must be between 0 and 10")
 
-    # Age is less than 18 AND handicap in range 0-3
-    if age < 18 and 0 <= handicap <= 3:
-        return "Junior"
-    # Age is 18 or older AND handicap in range 4-7
-    elif age >= 18 and 4 <= handicap <= 7:
-        return "Intermediate"
-    # Age is 55 or older AND handicap in range 8-10
-    elif age >= 55 and 8 <= handicap <= 10:
-        return "Senior"
-    # Any other case
-    else:
-        return "Open"
+    # Junior members age less than 18
+    if age < 18:
+        if 0 <= handicap <= 3:
+            return "Junior"
+        # "High Skill Junior" for handicap above 3
+        else:
+            return "High Skill Junior"
+
+    # Intermediate members age range 18-54
+    if age >= 18 and age < 55:
+        if 4 <= handicap <= 7:
+            return "Intermediate"
+        # "Low Skill Intermediate" for handicap less than 4
+        elif handicap < 4:
+            return "Low Skill Intermediate"
+        # "High Skill Intermediate" for handicap above 7
+        else:
+            return "High Skill Intermediate"
+
+    # Senior members age above 55
+    if age >= 55:
+        if 8 <= handicap <= 10:
+            return "Senior"
+        # "Low Skill Senior" for handicap less than 8
+        elif handicap < 8:
+            return "Low Skill Senior"

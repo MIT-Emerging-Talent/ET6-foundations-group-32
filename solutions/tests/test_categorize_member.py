@@ -41,22 +41,22 @@ class TestCategorizeMember(unittest.TestCase):
         excepted = "Senior"
         self.assertEqual(actual, excepted)
 
-    def test_open_member_1(self):
-        """it should evaluate (15, 7) to Open"""
+    def test_high_skill_junior_member(self):
+        """it should evaluate (15, 7) to High Skill Junior"""
         actual = categorize_member(15, 7)
-        expected = "Open"
+        expected = "High Skill Junior"
         self.assertEqual(actual, expected)
 
-    def test_open_member_2(self):
-        """it should evaluate (40, 8) to Open"""
+    def test_high_skill_intermediate(self):
+        """it should evaluate (40, 8) to High Skill Intermediate"""
         actual = categorize_member(40, 8)
-        expected = "Open"
+        expected = "High Skill Intermediate"
         self.assertEqual(actual, expected)
 
-    def test_open_member_3(self):
-        """it should evaluate (14, 7) to Open"""
+    def test_low_skill_senior(self):
+        """it should evaluate (55, 3) to Low Skill Senior"""
         actual = categorize_member(55, 3)
-        expected = "Open"
+        expected = "Low Skill Senior"
         self.assertEqual(actual, expected)
 
     # Edge cases
@@ -99,6 +99,38 @@ class TestCategorizeMember(unittest.TestCase):
     def test_maximum_handicap_senior(self):
         """it should evaluate cases at Senior maximum handicap"""
         self.assertEqual(categorize_member(60, 10), "Senior")
+
+    def test_high_skill_junior_min_handicap(self):
+        """it should evaluate (15, 4) as High Skill Junior at minimum handicap"""
+        self.assertEqual(categorize_member(15, 4), "High Skill Junior")
+
+    def test_high_skill_junior_max_handicap(self):
+        """it should evaluate (15, 10) as High Skill Junior at maximum handicap"""
+        self.assertEqual(categorize_member(15, 10), "High Skill Junior")
+
+    def test_low_skill_intermediate_min_handicap(self):
+        """it should evaluate (30, 0) as Low Skill Intermediate at minimum handicap"""
+        self.assertEqual(categorize_member(30, 0), "Low Skill Intermediate")
+
+    def test_low_skill_intermediate_max_handicap(self):
+        """it should evaluate (30, 3) as Low Skill Intermediate at maximum handicap"""
+        self.assertEqual(categorize_member(30, 3), "Low Skill Intermediate")
+
+    def test_high_skill_intermediate_min_handicap(self):
+        """it should evaluate (40, 8) as High Skill Intermediate at minimum handicap"""
+        self.assertEqual(categorize_member(40, 8), "High Skill Intermediate")
+
+    def test_high_skill_intermediate_max_handicap(self):
+        """it should evaluate (40, 10) as High Skill Intermediate at maximum handicap"""
+        self.assertEqual(categorize_member(40, 10), "High Skill Intermediate")
+
+    def test_low_skill_senior_min_handicap(self):
+        """it should evaluate (65, 0) as Low Skill Senior at minimum handicap"""
+        self.assertEqual(categorize_member(65, 0), "Low Skill Senior")
+
+    def test_low_skill_senior_max_handicap(self):
+        """it should evaluate (65, 8) as Low Skill Senior at maximum handicap"""
+        self.assertEqual(categorize_member(65, 7), "Low Skill Senior")
 
     # Defensive cases
     def test_invalid_age_type(self):
