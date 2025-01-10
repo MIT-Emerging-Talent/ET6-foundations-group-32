@@ -5,7 +5,7 @@ This module contains a function to calculate the sum of all even numbers
 from 1 to a given number.
 
 Function:
-- sum_of_evens: Returns the sum of all even numbers within the given range.
+ - sum_of_evens: Returns the sum of all even numbers within the given range.
 
 @author: Thandar Htwer (Marshar)
 Created on Jan 8, 2025
