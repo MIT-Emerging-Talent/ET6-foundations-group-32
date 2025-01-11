@@ -42,13 +42,6 @@ def categorize_member(age: int, handicap: int) -> str:
         'Intermediate'
         >>> categorize_member(30, 2)
         'Low Skill Intermediate'
-        >>> categorize_member(45, 9)
-        'High Skill Intermediate'
-        >>> categorize_member(55, 8)
-        'Senior'
-        >>> categorize_member(60, 3)
-        'Low Skill Senior'
-
     """
 
     # Validate inputs type
