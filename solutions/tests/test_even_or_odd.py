@@ -46,7 +46,7 @@ class TestEvenOrOdd(unittest.TestCase):
 
     def test_large_even_number(self):
         """
-        Tests with a large even number list.
+        Tests with a large even number.
         """
         self.assertEqual(even_or_odd(18325707324), "Even")
 
@@ -90,3 +90,17 @@ class TestEvenOrOdd(unittest.TestCase):
         """
         with self.assertRaises(AssertionError):
             even_or_odd([2, "dog"])
+
+    def test_float(self):
+        """
+        Tests with a float.
+        """
+        with self.assertRaises(AssertionError):
+            even_or_odd(2.5)
+
+    def test_integer_list(self):
+        """
+        Tests with an integer list.
+        """
+        with self.assertRaises(AssertionError):
+            even_or_odd([2, 3, 4])
