@@ -68,6 +68,11 @@ learn from the feedback and perspectives of others.
 
 ### ✅ What parts of your plan went as expected?
 
+- Clear delegation of tasks helped everyone know their responsibilities.
+
+- The tutorial sessions we held on using GitHub management tools before starting
+the tasks ensured that all team members understood and used them efficiently.
+
 - We successfully created issues and pull requests, linking them to the
 appropriate steps or columns in the project board.
 
@@ -78,4 +83,10 @@ appropriate steps or columns in the project board.
 - At times, members forgot to move the issues on the project board after
 completing each step.
 
----
+- Minor miscommunications occurred on a few occasions when it was not clear who
+would review each challenge or merge the pull requests.
+
+- We agreed on the idea of holding weekly meetings, but they never took place.
+
+- Ruff CI errors occurred due to a breaking change in a new version. We had to
+inform all members to update their extensions and fix files that failed the CI checks.
