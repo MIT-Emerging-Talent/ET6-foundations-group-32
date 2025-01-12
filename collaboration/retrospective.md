@@ -1,23 +1,94 @@
 <!-- this template is for inspiration, feel free to change it however you like! -->
 
-# Retrospective
+# 🚀 Retrospective
 
-## Stop Doing
+> This is the summary of our team's retrospective after our last meeting,
+reflecting on the successes and challenges, what worked and what didn’t, as our
+project nears its completion.
 
-## Continue Doing
+## 🚫 Stop Doing
 
-## Start Doing
+- Unclear communication, which leads to minor miscommunications.
 
-## Lessons Learned
+- Scheduling meetings close to the actual meeting time, which sometimes leaves
+people unavailable due to personal circumstances.
 
-______________________________________________________________________
+---
 
-## Strategy vs. Board
+## 🟢 Continue Doing
 
-### What parts of your plan went as expected?
+- Maintaining excellent collaboration with respect, patience, and support from
+everyone: using our strengths to assist others and allowing others to help with
+our weaknesses.
 
-### What parts of your plan did not work out?
+- Arranging tutorial sessions on GitHub and code reviews to ensure all team
+members clearly understand the strategy and their roles.
 
-### Did you need to add things that weren't in your strategy?
+- Being considerate of each other's time and availability, accounting for
+differences in time zones and individual circumstances.
 
-### Or remove extra steps?
+- Organizing the project systematically, with an emphasis on fairly dividing
+tasks among all members for review and completion of challenges.
+
+---
+
+## 🚀 Start Doing
+
+- Arranging meetings through issues and project boards on GitHub.
+
+- Having more discussions about debugging on GitHub instead of WhatsApp to
+practice using the platform more effectively.
+
+- Using Google Calendar to arrange meetings, which will allow us to see meeting
+times and receive notifications in advance.
+
+- Using platforms like Telegram for better accessibility to overcome internet
+traffic blockage for team members residing in Myanmar.
+
+---
+
+## 📚 Lessons Learned
+
+- We learned how to support each other by considering our individual strengths
+and weaknesses.
+
+- Staying mindful of the timeline is crucial, as additional deliverables from
+other workshops can make the project overwhelming for team members near the end.
+
+- Being open to suggestions helped us gain valuable insights by allowing us to
+learn from the feedback and perspectives of others.
+
+- We achieved our preset collective learning goals:
+  - Learned and practiced documentation.
+  - Learned and practiced code review and project collaboration on GitHub.
+
+---
+
+## 📋 Strategy vs. Board
+
+### ✅ What parts of your plan went as expected?
+
+- Clear delegation of tasks helped everyone know their responsibilities.
+
+- The tutorial sessions we held on using GitHub management tools before starting
+the tasks ensured that all team members understood and used them efficiently.
+
+- We successfully created issues and pull requests, linking them to the
+appropriate steps or columns in the project board.
+
+- Overall, our strategy aligned well with the project board most of the time.
+
+### ❌ What parts of your plan did not work out?
+
+- At times, members forgot to move the issues on the project board after
+completing each step.
+
+- Minor miscommunications occurred on a few occasions when it was not clear who
+would review each challenge or merge the pull requests.
+
+- We agreed on the idea of holding weekly meetings, but they never took place.
+
+- Ruff CI errors occurred due to a breaking change in a new version. We had to
+inform all members to update their extensions and fix files that failed the CI checks.
+
+---
